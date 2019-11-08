@@ -1,5 +1,7 @@
 package ie.gmit.ds;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Artist {
 
     private int artistId;
@@ -19,18 +21,22 @@ public class Artist {
         this.albumsRecorded = albumsRecorded;
     }
 
+    @JsonProperty
     public String getArtistName() {
         return artistName;
     }
 
+    @JsonProperty
     public String getArtistGenre() {
         return artistGenre;
     }
 
+    @JsonProperty
     public int getAlbumsRecorded() {
         return albumsRecorded;
     }
 
+    @JsonProperty
     public int getArtistId() {
         return artistId;
     }
