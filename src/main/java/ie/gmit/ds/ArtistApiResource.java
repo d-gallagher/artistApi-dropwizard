@@ -18,8 +18,8 @@ public class ArtistApiResource {
 
     public ArtistApiResource() {
         Artist testArtist = new Artist(1, "The GZA", "HipHop", 2);
-        Artist testArtist1 = new Artist(2, "The GZA", "HipHop", 2);
-        Artist testArtist2 = new Artist(3, "The GZA", "HipHop", 2);
+        Artist testArtist1 = new Artist(2, "Meshuggah", "Metal", 10);
+        Artist testArtist2 = new Artist(3, "Tool", "Alt", 6);
         artistsMap.put(testArtist.getArtistId(), testArtist);
         artistsMap.put(testArtist1.getArtistId(), testArtist1);
         artistsMap.put(testArtist2.getArtistId(), testArtist2);
