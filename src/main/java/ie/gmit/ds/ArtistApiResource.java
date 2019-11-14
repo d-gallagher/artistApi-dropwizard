@@ -3,6 +3,7 @@ package ie.gmit.ds;
 import java.util.Collection;
 import java.util.HashMap;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -42,8 +43,17 @@ public class ArtistApiResource {
         return artistsMap.get(artistId);
     }
 
-    // @POST
-    // public void postArtist(){
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Path("{artistId}/{artistName}/{artistGenre}/{albumsRecorded}")
+    public void postArtist(@PathParam("artistId") int artistId, @PathParam("artistName") String artistName, 
+                    @PathParam("artistGenre") String artistGenre, @PathParam("albumsRecorded") int albumsRecorded){
 
-    // }
+        Artist artist = new Artist(artistId, artistName, artistGenre, albumsRecorded);
+        
+        if(artistsMap.get(artistId) == null){
+            artistsMap.put(artistId, artist);
+        }
+        // return getArtistsById(); 
+    }
 }
